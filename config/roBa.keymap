@@ -40,6 +40,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        f1 {
+            bindings = <&Finder_com1>;
+            key-positions = <0 1>;
+        };
     };
 
     macros {
@@ -53,7 +58,7 @@
         Finder_com1: Finder_com1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>, <&macro_tap>;
+            bindings = <&kp LEFT_WIN &kp NUMBER_1>, <&macro_tap>;
 
             label = "FINDER_COM1";
         };
