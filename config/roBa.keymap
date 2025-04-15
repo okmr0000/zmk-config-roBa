@@ -81,7 +81,7 @@
 &kp LSHIFT  &kp TAB  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &lt_to_layer_0 3 ESC      &kp BACKSPACE  &lt 3 ENTER                             &lt 2 BACKSPACE
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         FUNCTION {
