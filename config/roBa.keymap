@@ -45,6 +45,21 @@
             bindings = <&Finder_com1>;
             key-positions = <0 1>;
         };
+
+        com2 {
+            bindings = <&Finder_com2>;
+            key-positions = <1 2>;
+        };
+
+        com3 {
+            bindings = <&Finder_com3>;
+            key-positions = <2 3>;
+        };
+
+        mis_com {
+            bindings = <&mis_Ctl>;
+            key-positions = <26 27>;
+        };
     };
 
     macros {
@@ -58,25 +73,29 @@
         Finder_com1: Finder_com1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp NUMBER_1>, <&macro_tap>;
-
+            bindings = <&kp LG(NUMBER_1)>;
             label = "FINDER_COM1";
         };
 
         Finder_com2: Finder_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp NUMBER_2>, <&macro_tap>;
-
+            bindings = <&kp LG(NUMBER_2)>;
             label = "FINDER_2";
         };
 
         Finder_com3: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_WIN &kp NUMBER_3>, <&macro_tap>;
-
+            bindings = <&kp LG(LEFT_WIN)>;
             label = "NEW_MACRO";
+        };
+
+        mis_Ctl: mis_Ctl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(UP_ARROW)>;
+            label = "MIS_CTL";
         };
     };
 
@@ -99,7 +118,7 @@
 &kp Q       &kp W      &kp E             &kp R         &kp T                                           &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A       &kp S      &kp D             &kp F         &kp G         &kp LS(LG(S))      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &lt 1 UNDER
 &kp Z       &kp X      &kp C             &kp V         &kp B         &kp ESC            &kp BACKSPACE  &kp N        &kp M  &kp COMMA  &kp DOT  &kp QUESTION
-&kp LSHIFT  &lt 1 TAB  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &lt 1 SPACE        &lt 2 SPACE    &lt 3 ENTER                             &lt 1 BACKSPACE
+&kp LSHIFT  &lt 1 TAB  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &kp SPACE          &lt 2 SPACE    &lt 3 ENTER                             &lt 1 BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
