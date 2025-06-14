@@ -87,7 +87,7 @@
         Finder_com3: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LEFT_WIN)>;
+            bindings = <&kp LG(NUMBER_3)>;
             label = "NEW_MACRO";
         };
 
