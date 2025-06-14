@@ -62,6 +62,22 @@
 
             label = "FINDER_COM1";
         };
+
+        Finder_com2: Finder_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp NUMBER_2>, <&macro_tap>;
+
+            label = "FINDER_2";
+        };
+
+        Finder_com3: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &kp NUMBER_3>, <&macro_tap>;
+
+            label = "NEW_MACRO";
+        };
     };
 
     behaviors {
@@ -80,21 +96,21 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W    &kp E             &kp R         &kp T                                                  &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A       &kp S    &kp D             &kp F         &kp G         &kp LS(LG(S))             &kp MINUS      &kp H        &kp J  &kp K      &kp L    &lt 1 ENTER
-&kp Z       &kp X    &kp C             &kp V         &kp B         &kp SPACE                 &kp SPACE      &kp N        &kp M  &kp COMMA  &kp DOT  &kp QUESTION
-&kp LSHIFT  &kp TAB  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &lt_to_layer_0 3 ESC      &kp BACKSPACE  &lt 3 ENTER                             &lt 2 BACKSPACE
+&kp Q       &kp W    &kp E             &kp R         &kp T                                         &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A       &kp S    &kp D             &kp F         &kp G         &kp LS(LG(S))      &kp MINUS    &kp H        &kp J  &kp K      &kp L    &lt 1 UNDER
+&kp Z       &kp X    &kp C             &kp V         &kp B         &kp TAB            &kp SPACE    &kp N        &kp M  &kp COMMA  &kp DOT  &kp QUESTION
+&kp LSHIFT  &kp ESC  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &lt 1 SPACE        &lt 2 SPACE  &lt 3 ENTER                             &lt 2 BACKSPACE
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&trans  &trans  &Finder_com1  &Finder_com3  &Finder_com3                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
+&trans  &trans  &trans        &trans        &trans        &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans        &trans        &trans        &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
+&trans  &trans  &trans        &trans        &trans        &trans      &trans   &trans                          &kp F12
             >;
         };
 
