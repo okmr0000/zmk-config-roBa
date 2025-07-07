@@ -19,31 +19,6 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(INT_KANA)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
-
         f1 {
             bindings = <&Finder_com1>;
             key-positions = <0 1>;
@@ -199,10 +174,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans            &msc MOVE_Y(10)   &trans           &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans            &mkp MB1          &mkp MB3         &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &msc MOVE_X(-10)  &msc MOVE_Y(-10)  &msc MOVE_X(10)  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                         &trans
+&trans  &trans  &trans  &trans  &trans                      &trans           &trans            &trans            &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LEFT_SHIFT   &mkp MB1          &mkp MB3          &mkp MB2         &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &msc MOVE_Y(10)  &msc MOVE_Y(-10)  &msc MOVE_X(-10)  &msc MOVE_X(10)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                                &trans
             >;
         };
 
