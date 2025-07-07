@@ -75,7 +75,7 @@
         };
 
         wml {
-            bindings = <&none>;
+            bindings = <&WM_L>;
             key-positions = <10 11>;
         };
     };
@@ -199,10 +199,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans          &trans        &trans          &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans          &mkp MB1      &mkp MB3        &mkp MB2         &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                         &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans           &trans           &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1         &mkp MB3         &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &msc MOVE_Y(10)  &msc MOVE_X(10)  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                              &trans
             >;
         };
 
