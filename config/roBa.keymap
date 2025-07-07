@@ -68,6 +68,16 @@
             bindings = <&kp LC(SPACE)>;
             key-positions = <26 25>;
         };
+
+        wmr {
+            bindings = <&WM_R>;
+            key-positions = <14 13>;
+        };
+
+        wml {
+            bindings = <&none>;
+            key-positions = <10 11>;
+        };
     };
 
     macros {
@@ -104,6 +114,20 @@
             #binding-cells = <0>;
             bindings = <&kp LC(UP_ARROW)>;
             label = "MIS_CTL";
+        };
+
+        WM_R: WM_R {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(RIGHT_ARROW)>;
+            label = "WM_R";
+        };
+
+        WM_L: WM_L {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ARROW>;
+            label = "WM_L";
         };
     };
 
