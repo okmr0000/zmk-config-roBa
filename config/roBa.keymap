@@ -126,7 +126,7 @@
         WM_L: WM_L {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ARROW>;
+            bindings = <&kp LC(LEFT_ARROW)>;
             label = "WM_L";
         };
     };
